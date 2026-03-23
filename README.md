@@ -1,21 +1,21 @@
-# 📈 Crypto Data Pipeline & Dashboard
+# Crypto Data Pipeline & Dashboard
 
 **An End-to-End Data Engineering pipeline fetching real-time cryptocurrency market data and visualizing it in a cloud-connected dashboard.**
 
-## 🏗️ Architecture
+## Architecture
 1. **Data Extraction:** Python script fetches live prices and 24h volumes from the **CoinGecko API**.
 2. **Containerization:** The extraction script is fully dockerized for consistent, environment-agnostic execution.
 3. **Cloud Storage:** Data is securely pushed to a remote **Neon PostgreSQL** database.
 4. **Visualization:** A **Streamlit** dashboard connects directly to the cloud DB to display historical trends using Pandas.
 5. **Automation (WIP):** Scheduled to run autonomously via GitHub Actions.
 
-## 🛠️ Tech Stack
+## Tech Stack
 * **Language:** Python 3.11
 * **Database:** PostgreSQL (Neon Serverless Cloud)
 * **Infrastructure:** Docker, GitHub Actions (CI/CD)
 * **Libraries:** `requests`, `psycopg2`, `pandas`, `streamlit`, `python-dotenv`
 
-## 🚀 How to Run Locally
+## How to Run Locally
 
 ### Prerequisites
 * Docker Desktop installed
