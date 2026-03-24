@@ -1,0 +1,27 @@
+name: Crypto Data Scraper
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Stáhni můj kód
+        uses: actions/checkout@v4
+
+      - name: Nainstaluj Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Nainstaluj knihovny
+        run: pip install -r requirements.txt
+
+      - name: Spusť Extractor a zapiš do Cloudu
+        env: 
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: python extractor.py
