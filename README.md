@@ -7,7 +7,7 @@
 2. **Containerization:** The extraction script is fully dockerized for consistent, environment-agnostic execution.
 3. **Cloud Storage:** Data is securely pushed to a remote **Neon PostgreSQL** database.
 4. **Visualization:** A **Streamlit** dashboard connects directly to the cloud DB to display historical trends using Pandas.
-5. **Automation (WIP):** Scheduled to run autonomously via GitHub Actions.
+5. **Automation:** Scheduled to run autonomously via GitHub Actions.
 
 ## Tech Stack
 * **Language:** Python 3.11
