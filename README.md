@@ -23,9 +23,9 @@
 * A Neon PostgreSQL database (with Connection String)
 
 ### Setup
-1. Clone the repository...
-2. Create a `.env` file... (ZDE DOPLŇ, CO TAM MÁ UŽIVATEL NAPSAT)
-3. ...
+1. Clone the repository
+2. Create a `.env` file in the root directory and add your Neon PostgreSQL connection string
+3. Install Dependencies: `pip install -r requirements.txt`
 
 ### Running the Extractor (Docker)
 1. Build the Docker image:
