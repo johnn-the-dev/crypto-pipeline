@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_crypto_prices
+    description: "A simple clean table with prices of cryptocurrencies"
+    columns:
+      - name: cryptocurrency
+        description: "Coin name (e.g. bitcoin)"
+        tests:
+          - not_null
+
+      - name: current_price_usd
+        description: "Price in USD"
+        tests:
+          - not_null

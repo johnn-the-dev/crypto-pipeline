@@ -4,7 +4,7 @@ import psycopg2
 import datetime
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(os.path.join(os.path.dirname(__file__), '../.env'))
 DATABASE_URL = os.getenv("DATABASE_URL")
 
 connection = psycopg2.connect(DATABASE_URL)
