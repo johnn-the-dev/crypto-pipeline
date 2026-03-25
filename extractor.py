@@ -33,8 +33,8 @@ if response.status_code == 200:
     content = response.json()
 
     for coin_name, values in content.items():
-        price = values["usd"]
-        volume = values["usd_24h_vol"]
+        price = values.get("usd", 0.0)
+        volume = values.get("usd_24h_vol", 0.0)
         timestamp = str(datetime.datetime.now())
 
         cursor.execute("INSERT INTO crypto_prices VALUES (%s, %s, %s, %s)", (coin_name, price, volume, timestamp))
